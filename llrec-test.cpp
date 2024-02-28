@@ -84,20 +84,27 @@ int main(int argc, char* argv[]){
     cout << "Original list: ";
     print(head);
 
-    // // Test out your linked list code
+    // // // Test out your linked list code
     // Node* smaller = nullptr;
     // Node* larger = nullptr;
-    // llpivot(head, smaller, larger, 8);
+    // Node* list = makeList({2, 4, 8, 3});
+	Node* smaller = (Node*) &head; // set to a non-null address
+	Node* larger = (Node*) &head; 
+    llpivot(head, smaller, larger, 5);
 
-    // print(smaller);
-    // std::cout << "Split" << std::endl;
-    // print(larger);
-
-    // dealloc(smaller);
-    // dealloc(larger);
-
-    head = llfilter(head, isOdd);
+    std::cout << "Smaller" << std::endl;
+    print(smaller);
+    std::cout << "Larger" << std::endl;
+    print(larger);
+    std::cout << "Old Original" << std::endl;
     print(head);
+
+
+    dealloc(smaller);
+    dealloc(larger);
+
+    // head = llfilter(head, isOdd);
+    // print(head);
 
     
     return 0;

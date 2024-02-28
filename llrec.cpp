@@ -6,6 +6,8 @@
 
 
 void llpivot(Node *&head, Node *&smaller, Node *&larger, int pivot){
+    smaller = nullptr;
+    larger = nullptr;
     splitHelper(head, smaller, larger, pivot);
     head = nullptr;
 }
